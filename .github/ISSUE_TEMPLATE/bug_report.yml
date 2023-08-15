@@ -48,10 +48,10 @@ body:
   validations:
     required: false
 
-- type: file
-  id: screenshot
+- type: textarea
+  id: screenshot_link
   attributes:
-    label: Upload Screenshot
-    description: "You can upload a screenshot to help illustrate the issue."
+    label: Screenshot Link
+    description: "Please provide a link to the screenshot illustrating the issue."
   validations:
     required: false
