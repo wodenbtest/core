@@ -7,6 +7,5 @@ body:
     attributes:
       label: Improvement Suggestion
       description: A clear and concise description of what the motivation or the current problem is and what is the suggested improvement?
-      placeholder: Ex. Currently Boost... However, as a storage provider or client, I'd like...
     validations:
       required: true
