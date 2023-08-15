@@ -12,3 +12,7 @@ close
 ## Checklist
 
 Before you mark the PR ready for review, please make sure that:
+
+- [ ] Commits have a clear commit message.
+- [ ] Tests exist for new functionality or change in behavior
+- [ ] CI is green
