@@ -1,5 +1,5 @@
 name: Feature request
-description:  Suggest an idea for lotus
+description:  Suggest an idea
 labels: [feature]
 body:
 - type: textarea
