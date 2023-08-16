@@ -20,8 +20,10 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Install Solhint
-        run: npm install -g solhint
+      - name: Install Solhint And Prettier
+        run: |
+          npm uninstall -g solhint solhint-plugin-prettier prettier-plugin-solidity
+          npm install -g solhint solhint-plugin-prettier prettier-plugin-solidity
 
       - name: Run Solhint Analysis
         run: |
