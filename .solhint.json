@@ -1,6 +1,8 @@
 {
     "extends": "solhint:recommended",
+    "plugins": ["prettier"],
     "rules": {
+      "prettier/prettier": "error",
       "indent": ["error", 4],
       "no-unused-vars": "error",
       "max-states-count": ["error", 18],
