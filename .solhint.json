@@ -2,10 +2,10 @@
     "extends": "solhint:recommended",
     "rules": {
       "indent": ["error", 4],
-      "no-unused-vars": "warn",
+      "no-unused-vars": "error",
       "max-states-count": ["error", 18],
-      "avoid-low-level-calls": "warn",
-      "reentrancy": "warn",
+      "avoid-low-level-calls": "error",
+      "reentrancy": "error",
       "not-rely-on-time": "error"
     }
   }
