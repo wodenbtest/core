@@ -25,7 +25,6 @@ jobs:
 
       - name: Run Solhint Analysis
         run: |
-          solc --version
           echo "Running Solhint analysis..."
           solhint "**/*.sol"
 
