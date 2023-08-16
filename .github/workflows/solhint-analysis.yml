@@ -22,8 +22,8 @@ jobs:
 
       - name: Install Solhint And Prettier
         run: |
-          npm uninstall -g solhint solhint-plugin-prettier prettier-plugin-solidity
-          npm install -g solhint solhint-plugin-prettier prettier-plugin-solidity
+          npm uninstall -g solhint solhint-plugin-prettier
+          npm install -g solhint solhint-plugin-prettier
 
       - name: Run Solhint Analysis
         run: |
