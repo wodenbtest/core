@@ -20,7 +20,7 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Install Solhint And Prettier
+      - name: Install Solhint
         run: |
           npm install -g solhint
 
