@@ -21,23 +21,22 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Install solhint-plugin-prettier
+        run: |
+          npm install solhint-plugin-prettier --save-dev
+            
+      - name: Install prettier-plugin-solidity
+        run: |
+          npm install prettier-plugin-solidity --save-dev
+
       - name: Install Solhint and solhint-plugin-prettier
         run: |
           npm install -g solhint
           solhint -V
 
-      - name: Install solhint-plugin-prettier
-        run: |
-          npm install solhint-plugin-prettier --save-dev
-          
-      - name: Install prettier-plugin-solidity
-        run: |
-          npm install prettier-plugin-solidity --save-dev
-
       - name: Run Solhint Analysis
         run: |
           solhint **/*.sol
-          shell: bash
 
       - name: Display Completed Message
         run: echo "Solhint analysis completed."
