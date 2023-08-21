@@ -23,11 +23,12 @@ jobs:
       - name: Install Solhint
         run: |
           npm install -g solhint
+          solhint -V
 
       - name: Run Solhint Analysis
         run: |
           echo "Running Solhint analysis..."
-          solhint "**/*.sol"
+          solhint *.sol **/*.sol
 
       - name: Display Completed Message
         run: echo "Solhint analysis completed."
