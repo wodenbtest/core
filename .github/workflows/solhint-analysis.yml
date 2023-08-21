@@ -33,6 +33,7 @@ jobs:
       - name: Run Solhint Analysis
         run: |
           solhint **/*.sol
+          shell: bash
 
       - name: Display Completed Message
         run: echo "Solhint analysis completed."
