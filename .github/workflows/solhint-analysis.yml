@@ -32,8 +32,7 @@ jobs:
 
       - name: Run Solhint Analysis
         run: |
-          echo "Running Solhint analysis..."
-          solhint *.sol **/*.sol
+          solhint **/*.sol
 
       - name: Display Completed Message
         run: echo "Solhint analysis completed."
