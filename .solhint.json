@@ -1,7 +1,6 @@
 {
     "extends": "solhint:default",
     "rules": {
-      "max-line-length": ["error", 180],
       "no-unused-vars": "error",
       "max-states-count": ["error", 18],
       "avoid-low-level-calls": "error",
