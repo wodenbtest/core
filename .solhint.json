@@ -1,5 +1,5 @@
 {
-    "extends": "solhint:defult",
+    "extends": "solhint:default",
     "rules": {
       "no-unused-vars": "error",
       "max-states-count": ["error", 18],
