@@ -21,10 +21,6 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install solhint-plugin-prettier
-        run: |
-          npm install --save-dev solhint solhint-plugin-prettier prettier prettier-plugin-solidity
-
       - name: Install Solhint
         run: |
           npm install -g solhint
