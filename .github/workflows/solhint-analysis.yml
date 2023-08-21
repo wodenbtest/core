@@ -23,7 +23,7 @@ jobs:
 
       - name: Install Solhint
         run: |
-          npm install -g solhint
+          npm install -g solhint solhint-plugin-prettier
           solhint -V
 
       - name: Run Solhint Analysis
