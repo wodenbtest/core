@@ -24,10 +24,12 @@ jobs:
       - name: Install solhint-plugin-prettier
         run: |
           npm install solhint-plugin-prettier --save-dev
+          solhint-plugin-prettier --version
             
       - name: Install prettier-plugin-solidity
         run: |
           npm install prettier-plugin-solidity --save-dev
+          prettier-plugin-solidity --version
 
       - name: Install Solhint and solhint-plugin-prettier
         run: |
