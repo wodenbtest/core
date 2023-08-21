@@ -1,8 +1,9 @@
 name: Solhint Analysis
 
 on:
-  push:
   pull_request:
+    paths:
+      - '**/*.sol'
     branches:
       - main
 
@@ -10,16 +11,12 @@ jobs:
   solhint:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        solidity-version: [0.8.21]
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
         with:
           submodules: recursive
-          
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -30,10 +27,15 @@ jobs:
           npm install -g solhint
           solhint -V
 
+      - name: Get changed files
+        id: files
+        run: |
+          echo "$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.sol$')" > changed_files.txt
+
       - name: Run Solhint Analysis
         run: |
-          solhint **/*.sol
-          shell: bash
+          echo "Running Solhint analysis..."
+          cat changed_files.txt | xargs solhint
 
       - name: Display Completed Message
         run: echo "Solhint analysis completed."
