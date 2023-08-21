@@ -1,6 +1,8 @@
 {
     "extends": "solhint:default",
+    "plugins": ["prettier"],
     "rules": {
+      "prettier/prettier": "error",
       "no-unused-vars": "error",
       "max-states-count": ["error", 18],
       "avoid-low-level-calls": "error",
