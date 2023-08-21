@@ -1,9 +1,8 @@
 name: Solhint Analysis
 
 on:
+  push:
   pull_request:
-    paths:
-      - '**/*.sol'
     branches:
       - main
 
@@ -27,15 +26,10 @@ jobs:
           npm install -g solhint
           solhint -V
 
-      - name: Get changed files
-        id: files
-        run: |
-          echo "$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.sol$')" > changed_files.txt
-
       - name: Run Solhint Analysis
         run: |
-          echo "Running Solhint analysis..."
-          cat changed_files.txt | xargs solhint
+          solhint **/*.sol
+          shell: bash
 
       - name: Display Completed Message
         run: echo "Solhint analysis completed."
