@@ -12,5 +12,6 @@ jobs:
 
     - name: Run Docker container
       run: |
-        docker run -d -p 61234:1234 glif/lotus:v1.25.0-gw-estimategas-calibnet-arm64
-        docker ps
+        docker run -d -p 8080:8080 mysql:latest
+        docker run -it --rm mysql:tag --verbose --help
+        docker exec -it some-mysql bash
