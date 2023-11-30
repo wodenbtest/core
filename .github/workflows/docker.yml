@@ -12,7 +12,6 @@ jobs:
 
     - name: Run Docker container
       run: |
-        docker pull mysql:latest
+        docker run -d -p 8080:8080 mysql:5.7
         docker ps
-        docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
         docker exec -it some-mysql mysql --version
