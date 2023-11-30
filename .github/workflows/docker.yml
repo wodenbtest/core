@@ -12,6 +12,6 @@ jobs:
 
     - name: Run Docker container
       run: |
-        docker run -d -p 8080:8080 mysql:5.7
+        docker run -d  mysql:5.7
         docker ps
-        docker exec -it some-mysql mysql --version
+        docker exec -it mysql:5.7 mysql --version
