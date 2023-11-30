@@ -13,5 +13,5 @@ jobs:
     - name: Run Docker container
       run: |
         docker run -d -p 8080:8080 mysql:latest
-        docker run -it --rm mysql:tag --verbose --help
-        docker exec -it some-mysql bash
+        docker run -it --rm mysql:latest --verbose --help
+        docker exec -it mysql:latest bash
