@@ -13,4 +13,5 @@ jobs:
     - name: Run Docker container
       run: |
         docker run -d -p 61234:1234 glif/lotus:v1.25.0-gw-estimategas-calibnet-arm64
+        docker exec -it glif/lotus:v1.25.0-gw-estimategas-calibnet-arm64 pwd
         docker exec -it glif/lotus:v1.25.0-gw-estimategas-calibnet-arm64 lotus sync status
