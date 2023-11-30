@@ -15,4 +15,4 @@ jobs:
         docker run -d  mysql:5.7
         docker ps
         docker image ls
-        docker exec -it mysql mysql --version
+        docker exec -it aab891d1aebd mysql --version
