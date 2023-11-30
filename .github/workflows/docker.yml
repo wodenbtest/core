@@ -12,7 +12,7 @@ jobs:
 
     - name: Run Docker container
       run: |
-        docker run -d  mysql:5.7
+        docker run -d --name my-mysql -e MYSQL_ROOT_PASSWORD=test@123 mysql:5.7
         docker ps
         docker image ls
-        docker exec -it aab891d1aebd mysql --version
+        docker exec -it my-mysql mysql --version
