@@ -19,6 +19,7 @@ jobs:
         docker ps -a
         docker ps
         docker image ls
+        docker logs localnetwork
         docker exec -it localnetwork ls -la /var/tmp/filecoin-proof-parameters/*
         docker exec -it localnetwork journalctl -u lotus-miner.service -f
         docker exec -it localnetwork /usr/local/bin/lotus wallet list
