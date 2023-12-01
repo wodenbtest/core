@@ -13,7 +13,8 @@ jobs:
     - name: Run Docker container
       run: |
         docker run -d --name localnetwork siriusyim/lotus-devnet:0.1.0
-    - name: Run Docker container
+        sleep 60
+    - name: lotus wallet list
       run: |
         docker ps
         docker image ls
