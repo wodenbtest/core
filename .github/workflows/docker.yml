@@ -16,6 +16,7 @@ jobs:
         sleep 60
     - name: lotus wallet list
       run: |
+        docker ps -a
         docker ps
         docker image ls
         docker exec -it localnetwork ls -la /var/tmp/filecoin-proof-parameters/*
