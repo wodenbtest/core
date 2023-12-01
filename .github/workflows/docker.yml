@@ -12,7 +12,9 @@ jobs:
 
     - name: Run Docker container
       run: |
-        docker run -d --name my-mysql -e MYSQL_ROOT_PASSWORD=test@123 mysql:5.7
+        docker run -d --name localnetwork siriusyim/lotus-devnet:0.1.0
+    - name: Run Docker container
+      run: |
         docker ps
         docker image ls
-        docker exec -it my-mysql ls
+        docker exec -it localnetwork /usr/local/bin/lotus wallet list
