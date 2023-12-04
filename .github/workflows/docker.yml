@@ -15,7 +15,7 @@ jobs:
         sudo cat /etc/issue
         sudo apt update
         sudo apt list --upgradable
-        sudo apt install -y tmux
+        sudo apt-get install -y ca-certificates build-essential clang ocl-icd-opencl-dev ocl-icd-libopencl1 jq libhwloc-dev tmux
 
     - name: Run Docker container
       run: |
