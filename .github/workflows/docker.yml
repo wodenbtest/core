@@ -19,7 +19,7 @@ jobs:
 
     - name: Run Docker container
       run: |
-        docker run -d -p 1234:1234 -v /opt/:/root/ --name localnetwork siriusyim/lotus-devnet:0.2.0
+        docker run -d -p 1234:1234 -v /opt/:/root/ --name localnetwork siriusyim/lotus-devnet:0.3.0
         docker logs localnetwork
         sleep 60
         docker ps -a
