@@ -10,13 +10,18 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Run Docker container
+    - name: install tmux
       run: |
+        sudo cat /etc/issue
         sudo apt update
         sudo apt install -y tmux
+        sudo tmux version
+
+    - name: Run Docker container
+      run: |
         docker run -d -p 1234:1234 --name localnetwork siriusyim/lotus-devnet:0.2.0
         docker ps -a
-        sleep 120
+        
     - name: lotus wallet list
       run: |
         docker ps -a
