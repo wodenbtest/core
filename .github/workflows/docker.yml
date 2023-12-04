@@ -12,9 +12,9 @@ jobs:
 
     - name: Run Docker container
       run: |
-        docker run -d -p 1234:1234 -v /var/tmp/filecoin-proof-parameters:/var/tmp/filecoin-proof-parameters --name localnetwork siriusyim/lotus-devnet:0.1.0
+        docker run -d -p 1234:1234 -v /var/tmp/filecoin-proof-parameters:/var/tmp/filecoin-proof-parameters --name localnetwork siriusyim/lotus-devnet:0.2.0
         docker ps -a
-        sleep 240
+        sleep 120
     - name: lotus wallet list
       run: |
         docker ps -a
