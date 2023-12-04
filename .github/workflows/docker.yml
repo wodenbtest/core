@@ -19,7 +19,7 @@ jobs:
 
     - name: Run Docker container
       run: |
-        docker run -d -p 1234:1234 --name localnetwork siriusyim/lotus-devnet:0.2.0
+        docker run -d -p 1234:1234 -v /opt/:/root/ --name localnetwork siriusyim/lotus-devnet:0.2.0
         docker logs localnetwork
         sleep 60
         docker ps -a
@@ -29,4 +29,4 @@ jobs:
         docker ps -a
         docker image ls
         docker logs localnetwork
-        docker exec localnetwork /usr/local/bin/lotus wallet list
+        docker exec -i localnetwork /usr/local/bin/lotus wallet list
